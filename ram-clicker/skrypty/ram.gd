@@ -29,3 +29,14 @@ func play_click_effect() -> void:
 	return_tween.tween_property(self, "scale", original_scale, tween_duration)
 	return_tween.tween_property(self, "position", original_position, tween_duration)
 	
+func format_bytes(bytes: float) -> String:
+	var units = ["B", "KB", "MB", "GB", "TB", "PB", "EB"]
+	var i = 0
+	
+	while bytes >= 1024.0 and i < units.size() - 1:
+		bytes /= 1024.0
+		i += 1
+	if i == 0:
+		return "%d %s" % [bytes, units[i]]
+	else:
+		return "%.2f %s" % [bytes, units[i]]
