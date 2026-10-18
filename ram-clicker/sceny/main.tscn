@@ -81,3 +81,5 @@ offset_bottom = 60.57523
 scale = Vector2(0.34424043, 0.34424043)
 text = "Shop"
 label_settings = SubResource("LabelSettings_mh27j")
+
+[connection signal="pressed" from="RAM" to="RAM" method="_on_pressed"]
