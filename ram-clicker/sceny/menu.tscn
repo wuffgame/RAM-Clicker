@@ -1,5 +1,21 @@
 [gd_scene format=3 uid="uid://dc6jnximm7pg8"]
 
+[sub_resource type="Theme" id="Theme_f6xyr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxeev"]
+bg_color = Color(0.12437842, 0.640954, 0.91394645, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk7ch"]
+bg_color = Color(0.0130546, 0.29057926, 0.43211848, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suby5"]
+bg_color = Color(0.035501722, 0.4535964, 0.66157556, 1)
+
 [node name="Control" type="Control" unique_id=2059923429]
 layout_mode = 3
 anchors_preset = 15
@@ -8,11 +24,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Start" type="Button" parent="." unique_id=1618690255]
-layout_mode = 0
-offset_left = 394.0
-offset_top = 215.99998
-offset_right = 594.92944
-offset_bottom = 251.27243
-scale = Vector2(1.7667897, 1.7667897)
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1526780887]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -110.0
+offset_right = -47.166504
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.3963583, 2.3963583)
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1618690255]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_f6xyr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxeev")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yk7ch")
+theme_override_styles/hover = SubResource("StyleBoxFlat_suby5")
 text = "start"
+
+[node name="Start3" type="Button" parent="VBoxContainer" unique_id=487100377]
+layout_mode = 2
+text = "settings"
+
+[node name="Start2" type="Button" parent="VBoxContainer" unique_id=461014793]
+layout_mode = 2
+text = "quit
+"
