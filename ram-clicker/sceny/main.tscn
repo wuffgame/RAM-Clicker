@@ -62,3 +62,16 @@ offset_right = 127.0
 offset_bottom = 262.0
 text = "Intek 3101"
 label_settings = SubResource("LabelSettings_mh27j")
+
+[node name="Button" type="Button" parent="." unique_id=146170848]
+offset_left = 424.00003
+offset_top = -126.00001
+offset_right = 464.87167
+offset_bottom = -102.98626
+scale = Vector2(3.0753503, 3.4768844)
+
+[node name="Label" type="Label" parent="Button" unique_id=641996093]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Shop"
