@@ -1,8 +1,28 @@
 [gd_scene format=3 uid="uid://ghl0p2nxkktm"]
 
+[ext_resource type="Texture2D" uid="uid://sbjpsuek7bg2" path="res://assets/intek 3101.jpg" id="1_b4mbv"]
+
 [node name="Main" type="Node2D" unique_id=2071581546]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=874833037]
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.446777, 0.44677705, 0.44677705, 1)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=787989576]
+custom_maximum_size = Vector2(340.86, 340)
+offset_left = 372.0
+offset_top = 104.0
+offset_right = 712.86
+offset_bottom = 444.0
+texture_normal = ExtResource("1_b4mbv")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=877981228]
+offset_left = 392.0
+offset_top = 16.0
+offset_right = 693.0
+offset_bottom = 85.0
+text = "1b"
+horizontal_alignment = 1
+vertical_alignment = 1
