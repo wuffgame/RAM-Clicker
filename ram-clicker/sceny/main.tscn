@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://sbjpsuek7bg2" path="res://assets/rams/intek 3101.jpg" id="1_b4mbv"]
 [ext_resource type="Script" uid="uid://coc23u50b0pxr" path="res://skrypty/ram.gd" id="2_8gesx"]
 [ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="2_mh27j"]
-[ext_resource type="Script" uid="uid://cwdig510ujgus" path="res://skrypty/shop_button.gd" id="4_yvbnq"]
+[ext_resource type="Script" uid="uid://bso7mvkppq8pp" path="res://skrypty/shop_button.gd" id="4_yvbnq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mh27j"]
 font = ExtResource("2_mh27j")

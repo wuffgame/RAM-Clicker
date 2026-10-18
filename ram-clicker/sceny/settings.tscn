@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://bs7c8d2nxdct7"]
 
+[ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="1_6frub"]
+
+[sub_resource type="Theme" id="Theme_3gbkp"]
+default_font = ExtResource("1_6frub")
+default_font_size = 100
+
 [node name="Settings" type="Control" unique_id=1196460119]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +13,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1234877153]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 222.0
+offset_right = 1213.0
+offset_bottom = 501.0
+theme = SubResource("Theme_3gbkp")
+bbcode_enabled = true
+text = "[rainbow freq=0.5 sat=0.8 val=0.8]teczowy napis!![/rainbow]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1225476672]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 346.0
+offset_right = 1208.0
+offset_bottom = 625.0
+theme = SubResource("Theme_3gbkp")
+bbcode_enabled = true
+text = "[tornado radius=10.0 freq=10]wirus tekstowy[/tornado]
+[tornado radius=3.0 freq=4.0]wirus tekstowy[/tornado]
+[tornado radius=5.0 freq=100.0]wirus tekstowy[/tornado]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1171984709]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 69.0
+offset_right = 1199.0
+offset_bottom = 348.0
+theme = SubResource("Theme_3gbkp")
+bbcode_enabled = true
+text = "[fade start=10 length=10]to zanika stopniowo[/fade]"
