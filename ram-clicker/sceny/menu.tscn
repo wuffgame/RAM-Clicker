@@ -6,6 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://dbybw8i1wwvlo" path="res://txt/button styles/hovernormal.tres" id="3_euj8q"]
 [ext_resource type="Script" uid="uid://cwmq3rs3pbu50" path="res://skrypty/quit.gd" id="5_euj8q"]
 [ext_resource type="Script" uid="uid://6g36msib36lr" path="res://skrypty/start.gd" id="5_o77l3"]
+[ext_resource type="Script" uid="uid://32278vs8450a" path="res://skrypty/settings.gd" id="6_1n4ar"]
 
 [sub_resource type="Theme" id="Theme_f6xyr"]
 
@@ -63,6 +64,7 @@ theme_override_styles/normal = ExtResource("1_suby5")
 theme_override_styles/pressed = ExtResource("2_cnv3x")
 theme_override_styles/hover = ExtResource("3_euj8q")
 text = "settings"
+script = ExtResource("6_1n4ar")
 
 [node name="quit" type="Button" parent="VBoxContainer" unique_id=461014793]
 layout_mode = 2
@@ -100,4 +102,5 @@ text = "welcome to..."
 label_settings = SubResource("LabelSettings_epuwg")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/settings" to="VBoxContainer/settings" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="VBoxContainer/quit" method="_on_pressed"]
