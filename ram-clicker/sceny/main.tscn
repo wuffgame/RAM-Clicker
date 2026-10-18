@@ -1,28 +1,64 @@
 [gd_scene format=3 uid="uid://ghl0p2nxkktm"]
 
-[ext_resource type="Texture2D" uid="uid://sbjpsuek7bg2" path="res://assets/intek 3101.jpg" id="1_b4mbv"]
+[ext_resource type="Texture2D" uid="uid://sbjpsuek7bg2" path="res://assets/rams/intek 3101.jpg" id="1_b4mbv"]
+[ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="2_mh27j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mh27j"]
+font = ExtResource("2_mh27j")
+font_size = 61
 
 [node name="Main" type="Node2D" unique_id=2071581546]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=874833037]
-offset_right = 1152.0
-offset_bottom = 648.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.446777, 0.44677705, 0.44677705, 1)
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=787989576]
 custom_maximum_size = Vector2(340.86, 340)
-offset_left = 372.0
-offset_top = 104.0
-offset_right = 712.86
-offset_bottom = 444.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.43
+offset_top = -170.0
+offset_right = 170.43
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource("1_b4mbv")
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="." unique_id=877981228]
-offset_left = 392.0
-offset_top = 16.0
-offset_right = 693.0
-offset_bottom = 85.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.0
+offset_top = -291.0
+offset_right = 152.0
+offset_bottom = -222.0
+grow_horizontal = 2
 text = "1b"
+label_settings = SubResource("LabelSettings_mh27j")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=213744615]
+
+[node name="Label2" type="Label" parent="." unique_id=1902114509]
+offset_left = -123.0
+offset_top = 202.0
+offset_right = 127.0
+offset_bottom = 262.0
+text = "Intek 3101"
+label_settings = SubResource("LabelSettings_mh27j")

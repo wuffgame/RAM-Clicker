@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sbjpsuek7bg2"
-path="res://.godot/imported/intek 3101.jpg-0d319534490611363b28e90ecd36897c.ctex"
+path="res://.godot/imported/intek 3101.jpg-b1c85b35d8f9c44e024b053a12dbb6f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/intek 3101.jpg"
-dest_files=["res://.godot/imported/intek 3101.jpg-0d319534490611363b28e90ecd36897c.ctex"]
+source_file="res://assets/rams/intek 3101.jpg"
+dest_files=["res://.godot/imported/intek 3101.jpg-b1c85b35d8f9c44e024b053a12dbb6f4.ctex"]
 
 [params]
 

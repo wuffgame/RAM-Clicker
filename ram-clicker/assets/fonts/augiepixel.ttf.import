@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://v6lf1wy1gxp6"
-path="res://.godot/imported/augiepixel.ttf-c639e1df618240a85327998b4404030c.fontdata"
+path="res://.godot/imported/augiepixel.ttf-b938e64cd8eb937a3780e7e0ec210d56.fontdata"
 
 [deps]
 
-source_file="res://assets/augiepixel.ttf"
-dest_files=["res://.godot/imported/augiepixel.ttf-c639e1df618240a85327998b4404030c.fontdata"]
+source_file="res://assets/fonts/augiepixel.ttf"
+dest_files=["res://.godot/imported/augiepixel.ttf-b938e64cd8eb937a3780e7e0ec210d56.fontdata"]
 
 [params]
 
