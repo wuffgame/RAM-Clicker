@@ -6,14 +6,22 @@ extends TextureButton
 var original_scale: Vector2
 var original_position: Vector2
 
+@onready var counter_label: Label = get_node("../Counter")
+
 func _ready() -> void:
 	original_scale = scale
 	original_position = position
 	pressed.connect(_on_pressed)
+	update_counter_display()
 
 func _on_pressed() -> void:
 	play_click_effect()
 	Global.counter += 1 * Global.multi
+	update_counter_display()
+	
+func update_counter_display() -> void:
+	if counter_label:
+		counter_label.text = format_bytes(Global.counter)
 
 func play_click_effect() -> void:
 	var tween = create_tween().set_parallel(true)
@@ -30,7 +38,7 @@ func play_click_effect() -> void:
 	return_tween.tween_property(self, "position", original_position, tween_duration)
 	
 func format_bytes(bytes: float) -> String:
-	var units = ["B", "KB", "MB", "GB", "TB", "PB", "EB"]
+	var units = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB"]
 	var i = 0
 	
 	while bytes >= 1024.0 and i < units.size() - 1:
