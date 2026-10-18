@@ -7,6 +7,7 @@ var original_scale: Vector2
 var original_position: Vector2
 
 @onready var counter_label: Label = get_node("../Counter")
+@onready var explosion: GPUParticles2D = get_node("Effect")
 
 func _ready() -> void:
 	original_scale = scale
@@ -15,6 +16,9 @@ func _ready() -> void:
 	update_counter_display()
 
 func _on_pressed() -> void:
+	if explosion:
+		explosion.restart()
+		explosion.emitting = true
 	play_click_effect()
 	Global.counter += 1 * Global.multi
 	update_counter_display()
