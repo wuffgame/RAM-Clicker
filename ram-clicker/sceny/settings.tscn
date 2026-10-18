@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://b4y36ik2c7j3r" path="res://skrypty/settingsui.gd" id="1_6frub"]
 [ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="2_3gbkp"]
+[ext_resource type="StyleBox" uid="uid://rnsr6cxffw1u" path="res://txt/button styles/normalmenu.tres" id="3_iesni"]
+[ext_resource type="StyleBox" uid="uid://cytyeiqk3ka55" path="res://txt/button styles/pressednormal.tres" id="4_fj41q"]
+[ext_resource type="StyleBox" uid="uid://dbybw8i1wwvlo" path="res://txt/button styles/hovernormal.tres" id="5_qgf43"]
 
 [sub_resource type="Theme" id="Theme_f6xyr"]
 default_font = ExtResource("2_3gbkp")
 default_font_size = 100
+
+[sub_resource type="Theme" id="Theme_epuwg"]
 
 [node name="Settings" type="Control" unique_id=1196460119]
 layout_mode = 3
@@ -38,15 +43,13 @@ text = "volume"
 [node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1068179440]
 layout_mode = 2
 
-[node name="mute" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1975425565]
+[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=105643316]
 layout_mode = 2
 text = "mute"
 
-[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=105643316]
-layout_mode = 2
-
 [node name="fullscreen" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=1854757197]
 layout_mode = 2
+text = "fullscreen"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1234444]
 layout_mode = 1
@@ -62,6 +65,22 @@ bbcode_enabled = true
 text = "[center][shake rate=20.0 level=20]settings [/shake][/center]
 "
 
+[node name="Button" type="Button" parent="." unique_id=1278868360]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 581.0
+offset_right = 935.0
+offset_bottom = 626.9655
+theme = SubResource("Theme_epuwg")
+theme_override_fonts/font = ExtResource("2_3gbkp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_iesni")
+theme_override_styles/pressed = ExtResource("4_fj41q")
+theme_override_styles/hover = ExtResource("5_qgf43")
+text = "Back
+"
+
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_check_box_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
