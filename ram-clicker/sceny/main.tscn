@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://coc23u50b0pxr" path="res://skrypty/ram.gd" id="2_8gesx"]
 [ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="2_mh27j"]
 [ext_resource type="Script" uid="uid://bso7mvkppq8pp" path="res://skrypty/shop_button.gd" id="4_yvbnq"]
+[ext_resource type="Script" uid="uid://47m4hmi7q2jc" path="res://skrypty/back.gd" id="5_ybg1e"]
 
 [sub_resource type="Gradient" id="Gradient_yvbnq"]
 colors = PackedColorArray(0.6569993, 0.5089718, 0.22318164, 1, 0.7262233, 3.4172833e-06, 5.7756904e-07, 1)
@@ -135,6 +136,7 @@ offset_left = -554.0
 offset_top = -310.0
 offset_right = -513.0
 offset_bottom = -250.0
+script = ExtResource("5_ybg1e")
 
 [node name="Back Label" type="Label" parent="Back" unique_id=696038052]
 layout_mode = 0
@@ -148,3 +150,4 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="RAM" to="RAM" method="_on_pressed"]
 [connection signal="pressed" from="Shop Button" to="Shop Button" method="_on_pressed"]
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
