@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ghl0p2nxkktm"]
 
 [ext_resource type="Texture2D" uid="uid://sbjpsuek7bg2" path="res://assets/rams/intek 3101.jpg" id="1_b4mbv"]
-[ext_resource type="Script" uid="uid://coc23u50b0pxr" path="res://sceny/ram.gd" id="2_8gesx"]
+[ext_resource type="Script" uid="uid://coc23u50b0pxr" path="res://skrypty/ram.gd" id="2_8gesx"]
 [ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="2_mh27j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mh27j"]
