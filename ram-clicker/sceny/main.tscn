@@ -127,5 +127,21 @@ scale = Vector2(0.34424043, 0.34424043)
 text = "Shop"
 label_settings = SubResource("LabelSettings_mh27j")
 
+[node name="Back" type="Button" parent="." unique_id=1005817605]
+offset_left = -554.0
+offset_top = -310.0
+offset_right = -513.0
+offset_bottom = -250.0
+
+[node name="Label" type="Label" parent="Back" unique_id=696038052]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 60.0
+text = "X"
+label_settings = SubResource("LabelSettings_mh27j")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="RAM" to="RAM" method="_on_pressed"]
 [connection signal="pressed" from="Shop Button" to="Shop Button" method="_on_pressed"]
