@@ -11,9 +11,9 @@
 
 [sub_resource type="Theme" id="Theme_vaapf"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_f6xyr"]
-font = ExtResource("1_cnv3x")
-font_size = 150
+[sub_resource type="Theme" id="Theme_epuwg"]
+default_font = ExtResource("1_cnv3x")
+default_font_size = 150
 
 [sub_resource type="LabelSettings" id="LabelSettings_epuwg"]
 font = ExtResource("1_cnv3x")
@@ -80,14 +80,15 @@ position = Vector2(644.65063, 362.6159)
 scale = Vector2(1.1548955, 5.7503853)
 zoom = Vector2(2, 2)
 
-[node name="Title" type="Label" parent="." unique_id=2118617035]
+[node name="Title" type="RichTextLabel" parent="." unique_id=1645612852]
 layout_mode = 0
 offset_left = 252.93579
 offset_top = 51.482506
 offset_right = 1029.9358
 offset_bottom = 195.48251
-text = "RAM Clicker!!"
-label_settings = SubResource("LabelSettings_f6xyr")
+theme = SubResource("Theme_epuwg")
+bbcode_enabled = true
+text = "[center][wave amp=30 freq=6 connected=0]ram clicker!![/wave][/center]"
 
 [node name="welcometo" type="Label" parent="." unique_id=2063776024]
 layout_mode = 0
