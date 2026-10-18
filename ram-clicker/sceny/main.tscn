@@ -103,12 +103,14 @@ vertical_alignment = 1
 zoom = Vector2(1.125, 1.125)
 
 [node name="Name of RAM" type="Label" parent="." unique_id=1902114509]
-offset_left = -123.0
-offset_top = 202.0
-offset_right = 127.0
-offset_bottom = 262.0
+offset_left = -176.0
+offset_top = 199.0
+offset_right = 174.0
+offset_bottom = 283.0
 text = "Intek 3101"
 label_settings = SubResource("LabelSettings_mh27j")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Shop Button" type="Button" parent="." unique_id=146170848]
 offset_left = 424.00003
