@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://sbjpsuek7bg2" path="res://assets/rams/intek 3101.jpg" id="1_b4mbv"]
 [ext_resource type="Script" uid="uid://coc23u50b0pxr" path="res://sceny/ram.gd" id="2_8gesx"]
 [ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="2_mh27j"]
+[ext_resource type="Script" uid="uid://cwdig510ujgus" path="res://skrypty/shop_button.gd" id="4_yvbnq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mh27j"]
 font = ExtResource("2_mh27j")
@@ -71,6 +72,7 @@ offset_top = -126.00001
 offset_right = 464.87167
 offset_bottom = -102.98626
 scale = Vector2(3.0753503, 3.4768844)
+script = ExtResource("4_yvbnq")
 
 [node name="Shop Button Label" type="Label" parent="Shop Button" unique_id=641996093]
 layout_mode = 0
@@ -83,3 +85,4 @@ text = "Shop"
 label_settings = SubResource("LabelSettings_mh27j")
 
 [connection signal="pressed" from="RAM" to="RAM" method="_on_pressed"]
+[connection signal="pressed" from="Shop Button" to="Shop Button" method="_on_pressed"]
