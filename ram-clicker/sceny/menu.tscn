@@ -1,20 +1,12 @@
 [gd_scene format=3 uid="uid://dc6jnximm7pg8"]
 
+[ext_resource type="StyleBox" uid="uid://rnsr6cxffw1u" path="res://txt/button styles/normalmenu.tres" id="1_suby5"]
+[ext_resource type="StyleBox" uid="uid://cytyeiqk3ka55" path="res://txt/button styles/pressednormal.tres" id="2_cnv3x"]
+[ext_resource type="StyleBox" uid="uid://dbybw8i1wwvlo" path="res://txt/button styles/hovernormal.tres" id="3_euj8q"]
+
 [sub_resource type="Theme" id="Theme_f6xyr"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxeev"]
-bg_color = Color(0.12437842, 0.640954, 0.91394645, 1)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk7ch"]
-bg_color = Color(0.0130546, 0.29057926, 0.43211848, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suby5"]
-bg_color = Color(0.035501722, 0.4535964, 0.66157556, 1)
+[sub_resource type="Theme" id="Theme_vaapf"]
 
 [node name="Control" type="Control" unique_id=2059923429]
 layout_mode = 3
@@ -41,18 +33,24 @@ scale = Vector2(2.3963583, 2.3963583)
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=1618690255]
 layout_mode = 2
-size_flags_vertical = 3
 theme = SubResource("Theme_f6xyr")
-theme_override_styles/normal = SubResource("StyleBoxFlat_qxeev")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_yk7ch")
-theme_override_styles/hover = SubResource("StyleBoxFlat_suby5")
+theme_override_styles/normal = ExtResource("1_suby5")
+theme_override_styles/pressed = ExtResource("2_cnv3x")
+theme_override_styles/hover = ExtResource("3_euj8q")
 text = "start"
 
-[node name="Start3" type="Button" parent="VBoxContainer" unique_id=487100377]
+[node name="settings" type="Button" parent="VBoxContainer" unique_id=487100377]
 layout_mode = 2
+theme = SubResource("Theme_vaapf")
+theme_override_styles/normal = ExtResource("1_suby5")
+theme_override_styles/pressed = ExtResource("2_cnv3x")
+theme_override_styles/hover = ExtResource("3_euj8q")
 text = "settings"
 
-[node name="Start2" type="Button" parent="VBoxContainer" unique_id=461014793]
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=461014793]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("1_suby5")
+theme_override_styles/pressed = ExtResource("2_cnv3x")
+theme_override_styles/hover = ExtResource("3_euj8q")
 text = "quit
 "
