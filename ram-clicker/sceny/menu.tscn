@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dc6jnximm7pg8"]
 
+[ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="1_cnv3x"]
 [ext_resource type="StyleBox" uid="uid://rnsr6cxffw1u" path="res://txt/button styles/normalmenu.tres" id="1_suby5"]
 [ext_resource type="StyleBox" uid="uid://cytyeiqk3ka55" path="res://txt/button styles/pressednormal.tres" id="2_cnv3x"]
 [ext_resource type="StyleBox" uid="uid://dbybw8i1wwvlo" path="res://txt/button styles/hovernormal.tres" id="3_euj8q"]
+[ext_resource type="Script" uid="uid://cwmq3rs3pbu50" path="res://skrypty/quit.gd" id="5_euj8q"]
+[ext_resource type="Script" uid="uid://6g36msib36lr" path="res://skrypty/start.gd" id="5_o77l3"]
 
 [sub_resource type="Theme" id="Theme_f6xyr"]
 
@@ -15,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.44675368, 0.44675368)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1526780887]
 layout_mode = 1
@@ -23,10 +27,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -212.0
-offset_top = -110.0
-offset_right = -47.166504
-offset_bottom = -9.0
+offset_left = -208.90732
+offset_top = -84.4944
+offset_right = 22.694092
+offset_bottom = 20.704834
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.3963583, 2.3963583)
@@ -34,14 +38,19 @@ scale = Vector2(2.3963583, 2.3963583)
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=1618690255]
 layout_mode = 2
 theme = SubResource("Theme_f6xyr")
+theme_override_fonts/font = ExtResource("1_cnv3x")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = ExtResource("1_suby5")
 theme_override_styles/pressed = ExtResource("2_cnv3x")
 theme_override_styles/hover = ExtResource("3_euj8q")
 text = "start"
+script = ExtResource("5_o77l3")
 
 [node name="settings" type="Button" parent="VBoxContainer" unique_id=487100377]
 layout_mode = 2
 theme = SubResource("Theme_vaapf")
+theme_override_fonts/font = ExtResource("1_cnv3x")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = ExtResource("1_suby5")
 theme_override_styles/pressed = ExtResource("2_cnv3x")
 theme_override_styles/hover = ExtResource("3_euj8q")
@@ -49,8 +58,19 @@ text = "settings"
 
 [node name="quit" type="Button" parent="VBoxContainer" unique_id=461014793]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cnv3x")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = ExtResource("1_suby5")
 theme_override_styles/pressed = ExtResource("2_cnv3x")
 theme_override_styles/hover = ExtResource("3_euj8q")
 text = "quit
 "
+script = ExtResource("5_euj8q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=175811114]
+position = Vector2(644.65063, 362.6159)
+scale = Vector2(1.1548955, 5.7503853)
+zoom = Vector2(2, 2)
+
+[connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="VBoxContainer/quit" method="_on_pressed"]
