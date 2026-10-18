@@ -56,8 +56,16 @@ offset_bottom = 98.0
 grow_horizontal = 2
 theme = SubResource("Theme_f6xyr")
 bbcode_enabled = true
-text = "[center][shake rate=20.0 level=10]settings [/shake][/center]
+text = "[center][shake rate=20.0 level=20]settings [/shake][/center]
 "
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1161462369]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 20.0
+item_count = 1
+popup/item_0/id = 0
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_check_box_toggled"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
