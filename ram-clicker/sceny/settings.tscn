@@ -42,6 +42,7 @@ text = "volume"
 
 [node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1068179440]
 layout_mode = 2
+value = 100.0
 
 [node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=105643316]
 layout_mode = 2

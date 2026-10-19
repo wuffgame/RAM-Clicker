@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*uid://cma5rpraqdp4r"
 Counter="*uid://bkrxgha3iwjab"
 Multi="*uid://dmtxrk3h452is"
+MusicPlayer="*uid://bpa8nhyyufy1f"
 
 [display]
 
