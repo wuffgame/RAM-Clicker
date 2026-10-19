@@ -12,11 +12,14 @@ var original_position: Vector2
 @onready var counter_label: Label = get_node("../Counter")
 @onready var explosion: GPUParticles2D = get_node("Effect")
 @onready var name_label: Label = get_node("../Name of RAM")
+@onready var Counter_effects: Label = get_node("../Counter/Counter_effects")
 
 func _ready() -> void:
 	original_scale = scale
 	original_position = position
 	pressed.connect(_on_pressed)
+	if Counter_effects:
+		Counter_effects.visible = false
 	update_counter_display()
 	update_ram_display() 
 
@@ -25,7 +28,22 @@ func _on_pressed() -> void:
 		explosion.restart()
 		explosion.emitting = true
 	play_click_effect()
-	Global.counter += 1 * Global.multi
+	var gained_value = 1 * Global.multi
+	Global.counter += gained_value
+	if Counter_effects:
+		var fx = Counter_effects.duplicate() as Label
+		fx.visible = true
+		Counter_effects.get_parent().add_child(fx)
+		fx.global_position = counter_label.global_position + (counter_label.size * counter_label.scale / 2.0) + Vector2(-20, -30)
+		fx.text = "+" + format_bytes(gained_value)
+		var tween = create_tween().set_parallel(true)
+		tween.tween_property(fx, "global_position", fx.global_position + Vector2(0, -50), 0.5)\
+			.set_ease(Tween.EASE_OUT)\
+			.set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(fx, "modulate:a", 0.0, 0.4)\
+			.set_delay(0.1)\
+			.set_ease(Tween.EASE_IN)
+		tween.chain().tween_callback(fx.queue_free)
 	update_counter_display()
 	update_ram_display()
 	
