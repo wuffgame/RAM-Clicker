@@ -13,6 +13,7 @@ var original_position: Vector2
 @onready var explosion: GPUParticles2D = get_node("Effect")
 @onready var name_label: Label = get_node("../Name of RAM")
 @onready var Counter_effects: Label = get_node("../Counter/Counter_effects")
+@onready var Multi_label: Label = get_node("../Multi Label")
 
 func _ready() -> void:
 	original_scale = scale
@@ -21,7 +22,8 @@ func _ready() -> void:
 	if Counter_effects:
 		Counter_effects.visible = false
 	update_counter_display()
-	update_ram_display() 
+	update_ram_display()
+	multi_label_update()
 
 func _on_pressed() -> void:
 	if explosion:
@@ -46,6 +48,7 @@ func _on_pressed() -> void:
 		tween.chain().tween_callback(fx.queue_free)
 	update_counter_display()
 	update_ram_display()
+	multi_label_update()
 	
 func update_counter_display() -> void:
 	if counter_label:
@@ -87,3 +90,6 @@ func format_bytes(bytes: float) -> String:
 		return "%d %s" % [bytes, units[i]]
 	else:
 		return "%.2f %s" % [bytes, units[i]]
+		
+func multi_label_update() -> void:
+	Multi_label.text = "Mult: x" + str(Global.multi)
