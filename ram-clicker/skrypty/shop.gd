@@ -12,6 +12,8 @@ var names = [
 @onready var balance: Label = $balance
 @onready var buyy: Button = $Buyy
 @onready var back: Button = $back
+@onready var cpu_particles: CPUParticles2D = $Buyy/CPUParticles2D
+
 
 func _ready() -> void:
 	update_shop_ui()
@@ -22,6 +24,7 @@ func _process(delta: float) -> void:
 	update_shop_ui()
 
 func _on_buyy_pressed() -> void:
+	trigger_explosion()
 	var max_ram_index = names.size() - 1
 	
 	if Global.counter >= upgrade_cost and Global.RAM_number < max_ram_index:
@@ -69,3 +72,6 @@ func format_bytes(bytes: float) -> String:
 		return "%d %s" % [bytes, units[i]]
 	else:
 		return "%.2f %s" % [bytes, units[i]]
+	
+func trigger_explosion() -> void:
+	cpu_particles.restart()
