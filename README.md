@@ -4,11 +4,11 @@
 
 # Screenshots and demo:
 
+Game on itch: https://wuffgame.itch.io/ram-clicker
 
+![img1.png](https://user-cdn.hackclub-assets.com/01a1560c-7643-754b-82f6-92177286a218/Zrzut%20ekranu_20261019_231333.png)
 
-tutaj bedzie link do itch.io i ssy
-
-
+![img2.png](https://user-cdn.hackclub-assets.com/01a1560c-7712-774b-b2bd-857aa6037c60/Zrzut%20ekranu_20261019_231350.png)
 
 # What is this?
 This is the best clicker game that you'll ever see! It's basicilly clicker game in which you earn bytes and RAM
