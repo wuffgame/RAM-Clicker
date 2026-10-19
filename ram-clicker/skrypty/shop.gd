@@ -16,20 +16,20 @@ var names = [
 func _ready() -> void:
 	update_shop_ui()
 	
-	back.pressed.connect(_on_back_pressed)
-	buyy.pressed.connect(_on_buyy_pressed)
+	
 
 func _process(delta: float) -> void:
 	balance.text = "balance:" + format_bytes(Global.counter)
+	update_shop_ui()
 
 func _on_buyy_pressed() -> void:
 	var max_ram_index = names.size() - 1
 	
 	if Global.counter >= upgrade_cost and Global.RAM_number < max_ram_index:
-		Global.counter -= upgrade_cost              # - value
+		Global.counter -= Global.upgrade_cost              # - value
 		Global.RAM_number += 1                      # + ram
-		Global.multi += 1.0                         # + mult
-		upgrade_cost *= 1.8                         # another step is higher
+		Global.multi = float(1 << Global.RAM_number)                        # + mult
+		Global.upgrade_cost *= 1.8                         # another step is pricer ( idk if that word exist in english )
 		update_shop_ui()
 	elif Global.RAM_number >= max_ram_index:
 		buyy.text = "MAX LEVEL"
