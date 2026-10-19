@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://cwmq3rs3pbu50" path="res://skrypty/quit.gd" id="5_euj8q"]
 [ext_resource type="Script" uid="uid://6g36msib36lr" path="res://skrypty/start.gd" id="5_o77l3"]
 [ext_resource type="Script" uid="uid://32278vs8450a" path="res://skrypty/settings.gd" id="6_1n4ar"]
-[ext_resource type="Script" uid="uid://cofid5dmcd76f" path="res://sceny/credits.gd" id="8_drfw3"]
+[ext_resource type="Script" uid="uid://cofid5dmcd76f" path="res://skrypty/credits.gd" id="8_drfw3"]
 
 [sub_resource type="Theme" id="Theme_f6xyr"]
 

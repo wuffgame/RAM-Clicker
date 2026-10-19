@@ -3,4 +3,5 @@
 [ext_resource type="Script" uid="uid://d3bgxpimibg35" path="res://skrypty/music_player.gd" id="1_07gxs"]
 
 [node name="MusicPlayer" type="AudioStreamPlayer" unique_id=366757728]
+volume_db = -15.0
 script = ExtResource("1_07gxs")
