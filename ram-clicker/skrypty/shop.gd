@@ -38,17 +38,26 @@ func _on_buyy_pressed() -> void:
 		print("Not enought bytes!")
 
 func update_shop_ui() -> void:
+	var max_ram_index = names.size() - 1
+	
 	if Global.RAM_number < names.size():
-		currentram.text = "current:" + names[Global.RAM_number]
+		currentram.text = "current: " + names[Global.RAM_number]
+	
+	if Global.RAM_number >= max_ram_index:
+		buyy.text = "MAX LEVEL"
+		buyy.disabled = true
+	elif Global.counter < Global.upgrade_cost:
+		# When player cannot affors
+		buyy.text = "not enough bytes!\nprice: " + format_bytes(Global.upgrade_cost)
+		buyy.disabled = true # blocked
+	else:
+		# When player can afford
+		buyy.text = "upgrade ram\nprice: " + format_bytes(Global.upgrade_cost)
+		buyy.disabled = false # Przycisk jest aktywny
 		
-		if Global.RAM_number < names.size() - 1:
-			buyy.text = "upgrade ram\nKoszt: " + format_bytes(upgrade_cost)
-		else:
-			buyy.text = "MAX LEVEL"
-			buyy.disabled = true
+	
 
 func _on_back_pressed() -> void:
-	
 	get_tree().change_scene_to_file("res://sceny/main.tscn")
 
 func format_bytes(bytes: float) -> String:
