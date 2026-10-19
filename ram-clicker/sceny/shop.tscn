@@ -57,7 +57,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_uly3j")
 text = "upgrade ram"
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Buyy" unique_id=1208967402]
-position = Vector2(132, 32)
+position = Vector2(131, 32)
 emitting = false
 amount = 60
 one_shot = true
