@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://q2g7u2oof0s1"]
+
+[ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="1_8wwbd"]
+[ext_resource type="StyleBox" uid="uid://rnsr6cxffw1u" path="res://txt/button styles/normalmenu.tres" id="2_wfq74"]
+[ext_resource type="StyleBox" uid="uid://cytyeiqk3ka55" path="res://txt/button styles/pressednormal.tres" id="3_rmcy1"]
+[ext_resource type="StyleBox" uid="uid://dbybw8i1wwvlo" path="res://txt/button styles/hovernormal.tres" id="4_3imuv"]
+[ext_resource type="Script" uid="uid://ds82p0h3ypxh8" path="res://skrypty/buttoncredits.gd" id="5_wfq74"]
+
+[sub_resource type="Theme" id="Theme_f6xyr"]
+default_font = ExtResource("1_8wwbd")
+default_font_size = 200
+
+[sub_resource type="Theme" id="Theme_epuwg"]
+default_font = ExtResource("1_8wwbd")
+default_font_size = 32
+
+[node name="Credits" type="Control" unique_id=1648196832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1243256408]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 100.0
+offset_right = 860.0
+offset_bottom = 294.0
+theme = SubResource("Theme_f6xyr")
+bbcode_enabled = true
+text = "[rainbow freq=1.0 sat=0.8 val=1.0]wuff[/rainbow]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=193992161]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 266.0
+offset_right = 1002.0
+offset_bottom = 460.0
+theme = SubResource("Theme_f6xyr")
+bbcode_enabled = true
+text = "[rainbow freq=1.0 sat=0.8 val=1.0]&[/rainbow]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=994359070]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 401.0
+offset_right = 895.0
+offset_bottom = 595.0
+theme = SubResource("Theme_f6xyr")
+bbcode_enabled = true
+text = "[rainbow freq=1.0 sat=0.8 val=1.0]kocio[/rainbow]"
+
+[node name="Button" type="Button" parent="." unique_id=199967315]
+layout_mode = 0
+offset_top = 652.0
+offset_right = 1279.0
+offset_bottom = 683.0
+theme = SubResource("Theme_epuwg")
+theme_override_styles/normal = ExtResource("2_wfq74")
+theme_override_styles/pressed = ExtResource("3_rmcy1")
+theme_override_styles/hover = ExtResource("4_3imuv")
+text = "back"
+script = ExtResource("5_wfq74")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

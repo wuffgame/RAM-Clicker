@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cwmq3rs3pbu50" path="res://skrypty/quit.gd" id="5_euj8q"]
 [ext_resource type="Script" uid="uid://6g36msib36lr" path="res://skrypty/start.gd" id="5_o77l3"]
 [ext_resource type="Script" uid="uid://32278vs8450a" path="res://skrypty/settings.gd" id="6_1n4ar"]
+[ext_resource type="Script" uid="uid://cofid5dmcd76f" path="res://sceny/credits.gd" id="8_drfw3"]
 
 [sub_resource type="Theme" id="Theme_f6xyr"]
 
@@ -101,6 +102,23 @@ offset_bottom = 38.66859
 text = "welcome to..."
 label_settings = SubResource("LabelSettings_epuwg")
 
+[node name="Start" type="Button" parent="." unique_id=533008822]
+layout_mode = 0
+offset_left = 358.1392
+offset_top = 714.04
+offset_right = 904.3014
+offset_bottom = 745.04
+theme = SubResource("Theme_f6xyr")
+theme_override_fonts/font = ExtResource("1_cnv3x")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("1_suby5")
+theme_override_styles/pressed = ExtResource("2_cnv3x")
+theme_override_styles/hover = ExtResource("3_euj8q")
+text = "credits
+"
+script = ExtResource("8_drfw3")
+
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/settings" to="VBoxContainer/settings" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="VBoxContainer/quit" method="_on_pressed"]
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
