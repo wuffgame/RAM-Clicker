@@ -34,7 +34,7 @@ This is the best clicker game that you'll ever see! It's basicilly clicker game 
 [kocio](https://github.com/kocio07)
 
 # License
-This project is licensed under the MIT License.
+The project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.
 
 
 
