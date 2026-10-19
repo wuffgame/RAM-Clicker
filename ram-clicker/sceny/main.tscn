@@ -24,13 +24,16 @@ particle_flag_disable_z = true
 emission_shape = 6
 emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 1.0
-emission_ring_radius = 1000.0
-emission_ring_inner_radius = 0.0
+emission_ring_radius = 449.74
+emission_ring_inner_radius = 62.87
 emission_ring_cone_angle = 90.0
+angle_min = 1.0728835e-05
+angle_max = 245.40001
+direction = Vector3(1, -1, 0)
 spread = 180.0
-initial_velocity_min = 200.0
-initial_velocity_max = 400.0
-gravity = Vector3(0, 300, 0)
+initial_velocity_min = 207.62
+initial_velocity_max = 702.91
+gravity = Vector3(0, 980, 0)
 damping_min = 50.000004
 damping_max = 50.000004
 scale_min = 0.01
@@ -77,13 +80,14 @@ script = ExtResource("2_8gesx")
 
 [node name="Effect" type="GPUParticles2D" parent="RAM" unique_id=1619453663]
 position = Vector2(169.43001, 170)
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.21450737, 0.21450737)
 emitting = false
 amount = 50
 texture = ExtResource("1_b4mbv")
-lifetime = 0.3
+lifetime = 0.25
 one_shot = true
-explosiveness = 1.0
+explosiveness = 0.9
+randomness = 0.75
 process_material = SubResource("ParticleProcessMaterial_4vuit")
 
 [node name="Counter" type="Label" parent="." unique_id=877981228]
