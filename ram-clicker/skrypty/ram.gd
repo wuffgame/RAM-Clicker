@@ -14,6 +14,7 @@ var original_position: Vector2
 @onready var name_label: Label = get_node("../Name of RAM")
 @onready var Counter_effects: Label = get_node("../Counter/Counter_effects")
 @onready var Multi_label: Label = get_node("../Multi Label")
+@onready var ClickPlayer: AudioStreamPlayer = get_node("ClickPlayer")
 
 func _ready() -> void:
 	original_scale = scale
@@ -26,6 +27,7 @@ func _ready() -> void:
 	multi_label_update()
 
 func _on_pressed() -> void:
+	ClickPlayer.play()
 	if explosion:
 		explosion.restart()
 		explosion.emitting = true
