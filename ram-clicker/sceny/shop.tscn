@@ -10,6 +10,12 @@
 default_font = ExtResource("1_kbbt7")
 default_font_size = 100
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uly3j"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="Theme" id="Theme_epuwg"]
 default_font = ExtResource("1_kbbt7")
 default_font_size = 48
@@ -47,6 +53,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = ExtResource("2_6ggux")
 theme_override_styles/pressed = ExtResource("3_r6sdo")
 theme_override_styles/hover = ExtResource("4_uly3j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uly3j")
 text = "upgrade ram"
 
 [node name="currentram" type="Label" parent="." unique_id=629072218]

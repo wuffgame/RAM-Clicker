@@ -13,7 +13,7 @@ var original_position: Vector2
 func _ready() -> void:
 	original_scale = scale
 	original_position = position
-	pressed.connect(_on_pressed)
+	
 	update_counter_display()
 	update_name_display()
 

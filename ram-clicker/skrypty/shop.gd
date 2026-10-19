@@ -15,8 +15,7 @@ var names = [
 
 func _ready() -> void:
 	update_shop_ui()
-	
-	
+
 
 func _process(delta: float) -> void:
 	balance.text = "balance:" + format_bytes(Global.counter)
@@ -29,19 +28,19 @@ func _on_buyy_pressed() -> void:
 		Global.counter -= Global.upgrade_cost              # - value
 		Global.RAM_number += 1                      # + ram
 		Global.multi = float(1 << Global.RAM_number)                        # + mult
-		Global.upgrade_cost *= 1.8                         # another step is pricer ( idk if that word exist in english )
+		Global.upgrade_cost *= 3.2                         # another step is pricer ( idk if that word exist in english )
 		update_shop_ui()
 	elif Global.RAM_number >= max_ram_index:
 		buyy.text = "MAX LEVEL"
 		buyy.disabled = true
 	else:
-		print("Not enought bytes!")
+		print("not enought bytes!")
 
 func update_shop_ui() -> void:
 	var max_ram_index = names.size() - 1
 	
 	if Global.RAM_number < names.size():
-		currentram.text = "current: " + names[Global.RAM_number]
+		currentram.text = "current:   " + names[Global.RAM_number]
 	
 	if Global.RAM_number >= max_ram_index:
 		buyy.text = "MAX LEVEL"
@@ -53,7 +52,7 @@ func update_shop_ui() -> void:
 	else:
 		# When player can afford
 		buyy.text = "upgrade ram\nprice: " + format_bytes(Global.upgrade_cost)
-		buyy.disabled = false # Przycisk jest aktywny
+		buyy.disabled = false # avalible
 		
 	
 
