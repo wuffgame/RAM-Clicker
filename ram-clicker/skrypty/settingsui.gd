@@ -2,11 +2,17 @@ extends Control
 
 
 func _on_volume_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(0,value)
+	if value <= 0:
+		AudioServer.set_bus_mute(0, false)
+	else:
+		AudioServer.set_bus_mute(0, false)
+		var linear_volume = value / 100.0
+		var db_volume = linear_to_db(linear_volume)
+		AudioServer.set_bus_volume_db(0, db_volume)
 
 
 func _on_check_box_toggled(toggled_on: bool) -> void:
-	pass # Replace with function body.
+	AudioServer.set_bus_mute(0, toggled_on)
 
 
 func _on_fullscreen_toggled(toggled_on: bool) -> void:
