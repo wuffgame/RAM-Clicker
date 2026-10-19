@@ -3,7 +3,6 @@ extends TextureButton
 @export var scale_reduction: float = 0.95
 @export var tween_duration: float = 0.05
 
-
 @export var ram_textures: Array[Texture2D] = []
 
 var original_scale: Vector2
@@ -67,6 +66,8 @@ func update_ram_display() -> void:
 	# change txt
 	if Global.RAM_number < ram_textures.size() and ram_textures[Global.RAM_number] != null:
 		texture_normal = ram_textures[Global.RAM_number]
+	else:
+		texture_normal = load("res://assets/rams/RAM placeholder.jpg")
 
 func play_click_effect() -> void:
 	var tween = create_tween().set_parallel(true)
