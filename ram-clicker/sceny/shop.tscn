@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0wom255iwist"]
 
 [ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="1_kbbt7"]
+[ext_resource type="Script" uid="uid://bduixeuvf7r5h" path="res://skrypty/shop.gd" id="1_r6sdo"]
 [ext_resource type="StyleBox" uid="uid://rnsr6cxffw1u" path="res://txt/button styles/normalmenu.tres" id="2_6ggux"]
 [ext_resource type="StyleBox" uid="uid://cytyeiqk3ka55" path="res://txt/button styles/pressednormal.tres" id="3_r6sdo"]
 [ext_resource type="StyleBox" uid="uid://dbybw8i1wwvlo" path="res://txt/button styles/hovernormal.tres" id="4_uly3j"]
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_r6sdo")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1894828901]
 layout_mode = 1
@@ -65,7 +67,7 @@ offset_bottom = 76.0
 theme = SubResource("Theme_epuwg")
 text = "balance:"
 
-[node name="Buyy2" type="Button" parent="." unique_id=2107227637]
+[node name="back" type="Button" parent="." unique_id=2107227637]
 layout_mode = 0
 offset_left = 39.0
 offset_top = 16.0
@@ -77,3 +79,6 @@ theme_override_styles/normal = ExtResource("2_6ggux")
 theme_override_styles/pressed = ExtResource("3_r6sdo")
 theme_override_styles/hover = ExtResource("4_uly3j")
 text = "back"
+
+[connection signal="pressed" from="Buyy" to="." method="_on_buyy_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
