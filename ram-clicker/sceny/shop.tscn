@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://c0wom255iwist"]
 
+[ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="1_kbbt7"]
+
+[sub_resource type="Theme" id="Theme_f6xyr"]
+default_font = ExtResource("1_kbbt7")
+default_font_size = 100
+
 [node name="Shop" type="Control" unique_id=13127674]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +13,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1894828901]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -642.0
+offset_right = 642.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme = SubResource("Theme_f6xyr")
+bbcode_enabled = true
+text = "[center][wave amp=30 freq=6 connected=0]shop![/wave][/center]"
+
+[node name="Buyy" type="Button" parent="." unique_id=1177902462]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
