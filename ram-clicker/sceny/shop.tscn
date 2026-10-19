@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://c0wom255iwist"]
 
 [ext_resource type="FontFile" uid="uid://v6lf1wy1gxp6" path="res://assets/fonts/augiepixel.ttf" id="1_kbbt7"]
+[ext_resource type="StyleBox" uid="uid://rnsr6cxffw1u" path="res://txt/button styles/normalmenu.tres" id="2_6ggux"]
+[ext_resource type="StyleBox" uid="uid://cytyeiqk3ka55" path="res://txt/button styles/pressednormal.tres" id="3_r6sdo"]
+[ext_resource type="StyleBox" uid="uid://dbybw8i1wwvlo" path="res://txt/button styles/hovernormal.tres" id="4_uly3j"]
 
 [sub_resource type="Theme" id="Theme_f6xyr"]
 default_font = ExtResource("1_kbbt7")
 default_font_size = 100
+
+[sub_resource type="Theme" id="Theme_epuwg"]
+default_font = ExtResource("1_kbbt7")
+default_font_size = 48
 
 [node name="Shop" type="Control" unique_id=13127674]
 layout_mode = 3
@@ -29,5 +36,44 @@ text = "[center][wave amp=30 freq=6 connected=0]shop![/wave][/center]"
 
 [node name="Buyy" type="Button" parent="." unique_id=1177902462]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 201.0
+offset_top = 149.0
+offset_right = 466.0
+offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("1_kbbt7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("2_6ggux")
+theme_override_styles/pressed = ExtResource("3_r6sdo")
+theme_override_styles/hover = ExtResource("4_uly3j")
+text = "upgrade ram"
+
+[node name="currentram" type="Label" parent="." unique_id=629072218]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 153.0
+offset_right = 646.0
+offset_bottom = 200.0
+theme = SubResource("Theme_epuwg")
+text = "current:"
+
+[node name="balance" type="Label" parent="." unique_id=173524224]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 29.0
+offset_right = 1015.0
+offset_bottom = 76.0
+theme = SubResource("Theme_epuwg")
+text = "balance:"
+
+[node name="Buyy2" type="Button" parent="." unique_id=2107227637]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 16.0
+offset_right = 180.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("1_kbbt7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("2_6ggux")
+theme_override_styles/pressed = ExtResource("3_r6sdo")
+theme_override_styles/hover = ExtResource("4_uly3j")
+text = "back"
